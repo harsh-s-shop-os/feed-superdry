@@ -2,6 +2,18 @@
 
 Human-readable log of what changed in the onboarding prototype, for product review. Updated at each local commit — most recent first.
 
+## 2026-09-25 — Feed content now comes from the Brand Feeds Google Sheet
+
+**What changed for a reviewer:** nothing visible yet. The feed, the deck and the Brand Memory setup column show exactly the same cards as before (checked card by card against the previous build). The only visible difference is inside deck columns: cards now sit in the sheet's row order, so a column can open on a table card where it used to open on an image card.
+
+**What changed underneath:** every post has moved out of the code and into the Brand Feeds sheet. Each Cosmix tab (Cosmix-1, -2, -3) is a complete, independent feed with its own posts, copy, order and images. The v1/v2/v3 switch in the bottom-left corner now picks which tab you are looking at.
+
+**How an edit reaches the prototype:** edit the sheet, then ask Claude to sync the Cosmix feed (or run `python3 tools/sync_sheet.py`). The sync checks every row first and stops with a plain list of problems if anything is wrong, such as a missing image, a typo in a status, or a duplicate id. Once it passes, it reports what was added, edited, hidden or reordered.
+
+**What the sheet controls per post:** status (live, draft, hidden), location (feed, deck, onboarding, in any combination), agent, title, description, images (several = carousel), CTA, table rows, tags, and which deck column the post goes in. The top of each tab holds the brand details (name, site, product count, logo, colours, type), which also drive the Brand guidelines card.
+
+**Not in the sheet yet:** stories, the Signals column, the intro card and the AI-visibility report numbers (the chart and ring posts carry their data as fixed values in the sheet's extra_json column).
+
 ## 2026-09-22 — Fermented Yeast Protein: real variation 3 image
 
 assets/v3/cx-fyp-campaign.jpg is now the sunset/coastal shot, replacing the variation 1 placeholder that was filling that slot.

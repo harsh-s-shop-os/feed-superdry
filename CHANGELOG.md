@@ -2,6 +2,56 @@
 
 Human-readable log of what changed in the onboarding prototype, for product review. Updated at each local commit — most recent first.
 
+## 2026-09-25 — Forked and rebranded for Superdry (superdry.in)
+
+**What changed:** this fork is now Superdry, not Cosmix. Real facts pulled from the live
+site, not guessed: commerce runs on **Fynd Platform** (not Shopify — no products.json,
+no Next.js data blob, company id 46 on cdn.fynd.com), and the ad stack is **Meta Ads +
+Google Ads**, both confirmed firing through the site's own Google Tag Manager container
+(GTM-55MBBMF). Palette (`#0E0E0E` / `#e87a1e` / `#585555`), fonts (Helvetica Bold
+headings, Poppins body) and the logo/favicon mark are all read off the live site.
+
+**Content:** hand-authored an 18-post `Superdry-1` tab in `data/feed-data.js`, in the
+exact shape `tools/sync_sheet.py` generates, since no Superdry tab exists in the shared
+Brand Feeds sheet yet (`tools/sheet.config.json` now points only at `Superdry-1`).
+Real products/prices from live superdry.in collection pages: Code Tech Relaxed Zip
+(Rs 7,370 -> Rs 2,948 / Rs 2,579, 60-65% off) and Carbon Ultra Track Top (Rs 8,999 ->
+Rs 4,049, 55% off), both in Sweatshirts & Hoodies. Real campaign banners (AW26 Master,
+Bottomwear Edit) and a real on-model Skinny Denims shot pulled straight from the site's
+own CDN. The Google Drive folder shared for this brand ("SuperDry") was checked and is
+currently empty.
+
+**Connector identity propagated everywhere it's hardcoded**, not just one place: the
+onboarding Brand Memory connect card, the Signals source row, the left-rail Agents and
+Skills/connectors flyouts, the ad/commerce spotlight index array, the deck column
+connect card, the catalog-sync loading copy, and the `srcState`/`signalsLive` gating —
+all now say Fynd Platform instead of Shopify. Grepped the whole file afterward for any
+leftover "shopify"/"cosmix" string; none left.
+
+**Chrome surfaces that are easy to miss, fixed:** the workspace rail badge / brand mark
+now uses the real Superdry favicon mark (was a leftover Cosmix image); the Credits and
+Jam modal hero images now use the real AW26 / Bottomwear Edit banners; the "Popular ads"
+story slides and the "Trends" story slides (previously hardcoded Cosmix gut-health/
+protein copy and images) are now real Superdry findings and imagery.
+
+**Verified:** extracted and syntax-checked every inline `<script>` block and
+`data/feed-data.js`; served the fork locally and drove it with headless Playwright —
+walked the onboarding Brand Memory tabs (Brand/Ads/Storefront/Visibility), confirmed
+"Superdry" and "Fynd" render and no "Cosmix" text remains, confirmed zero real broken
+images (the two `naturalWidth===0` hits are dynamic template slots that populate later,
+not missing assets) and zero console/page errors, and screenshotted the AW26 creative
+card rendering with the real copy and image.
+
+**Known limits, left honest rather than faked:** no product/campaign video (a real PDP
+route on superdry.in needs the client-rendered app to resolve; a guessed URL served an
+unrelated brand's page, so this wasn't attempted); deeper per-post art direction beyond
+the site's own banners/catalog shots wasn't done; no AI-visibility numbers (the one
+visibility card proposes running a real audit instead of inventing a score); exact live
+product count omitted, not exposed by any single storefront endpoint; git history/remote
+cleanup (this repo still carries feed-cosmix lineage under the hood) is a separate step,
+not yet done, pending confirmation on where this should be pushed.
+
+
 ## 2026-09-25 — Feed content now comes from the Brand Feeds Google Sheet
 
 **What changed for a reviewer:** nothing visible yet. The feed, the deck and the Brand Memory setup column show exactly the same cards as before (checked card by card against the previous build). The only visible difference is inside deck columns: cards now sit in the sheet's row order, so a column can open on a table card where it used to open on an image card.

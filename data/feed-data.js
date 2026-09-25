@@ -1,23 +1,24 @@
-// Hand-authored for the Superdry rebrand (feed-rebrand-from-website). Matches the shape tools/sync_sheet.py generates.
+// Hand-authored for the Superdry rebrand. Same shape tools/sync_sheet.py writes.
 window.FEED_DATA = {
- "syncedAt": "2026-09-25T10:55:56",
- "source": "hand-authored (feed-rebrand-from-website skill), pending a real Brand Feeds sheet tab",
+ "syncedAt": "2026-09-25T12:09:19",
+ "source": "hand-authored (feed-rebrand-from-website), pending a Superdry-1 tab in the Brand Feeds sheet",
  "variants": [
   {
    "tab": "Superdry-1",
    "brand": {
     "name": "Superdry",
     "host": "superdry.in",
-    "logo": "assets/sd/sd-favicon.png",
+    "products": 5461,
+    "logo": "assets/sd/sd-brandkit-logo.png",
     "colors": [
+     "#FF1E00",
      "#0E0E0E",
-     "#e87a1e",
-     "#585555"
+     "#FFFFFF"
     ],
     "type_sample": "Superdry",
     "type_name": "Helvetica Bold headings, Poppins body",
     "type_face": "'Poppins', Helvetica, Arial, sans-serif",
-    "note": "v1: real site palette/fonts/logo + real catalog/campaign photography from superdry.in (Fynd Platform, company 46). Product count omitted: not exposed by any single storefront endpoint."
+    "note": "v1: palette from the logo (#FF1E00) and site chrome; imagery = the site's own campaign banners (mobile cuts, squared) and live listing photos. Product count = Men's (3,381) + Women's (2,080) collection totals."
    },
    "posts": [
     {
@@ -27,13 +28,13 @@ window.FEED_DATA = {
       "deck"
      ],
      "agent": "creative",
-     "time": "18 min",
-     "title": "Run the AW26 hero as this week's lead creative",
-     "sub": "The AW26 campaign banner is already on-brand and unused outside the homepage strip. Repurposing it as a standalone social post gets a shot you paid to produce in front of a second audience for free.",
-     "campaign": "AW26 Master",
-     "ratio": "wide",
+     "time": "14 min",
+     "campaign": "AW'26 New Arrivals",
+     "ratio": "square",
+     "title": "Run AW'26 New Arrivals as this week's lead post",
+     "sub": "The AW'26 banner is live on the homepage and shot as a festival story, the kind of frame that holds a scroll. Approving publishes it to Instagram as a square post with the headline kept whole.",
      "images": [
-      "assets/sd/sd-hero-aw26.jpg"
+      "assets/sd/sd-cr-aw26.jpg"
      ],
      "cta": {
       "label": "Publish Campaign",
@@ -49,13 +50,14 @@ window.FEED_DATA = {
       "deck"
      ],
      "agent": "creative",
-     "time": "41 min",
-     "title": "Cut the Bottomwear Edit banner into a Reels-ratio teaser",
-     "sub": "Same campaign, reframed tall for Stories and Reels instead of the wide desktop strip it was shot for. Denim and bottomwear together outsell either alone on the collection pages.",
-     "campaign": "Bottomwear Edit",
-     "ratio": "4:5",
+     "time": "32 min",
+     "campaign": "The HER Edit + The Top Wear Edit",
+     "ratio": "square",
+     "title": "Pair the HER Edit and the Top Wear Edit as one carousel",
+     "sub": "Both come from the same fairground shoot and both only live on the homepage. Approving turns them into one two-frame carousel that reaches men and women from a single brief.",
      "images": [
-      "assets/sd/sd-hero-bottomwear.jpg"
+      "assets/sd/sd-cr-her.jpg",
+      "assets/sd/sd-cr-topwear.jpg"
      ],
      "cta": {
       "label": "Publish Campaign",
@@ -71,17 +73,18 @@ window.FEED_DATA = {
       "deck"
      ],
      "agent": "creative",
-     "time": "1 hr",
-     "deckCol": "creatives",
-     "title": "Give the Skinny Denims listing an on-model lead image",
-     "sub": "The top denim listing leads with a flat packshot while an on-model shot of the same pair already exists in the catalog. Swapping the lead image to the on-model crop is a same-SKU change, no reshoot.",
-     "campaign": "Skinny Denims",
-     "ratio": "4:5",
+     "time": "58 min",
+     "campaign": "The Bottomwear Edit",
+     "ratio": "square",
+     "title": "Cut the Bottomwear Edit into a Story",
+     "sub": "This banner sells the product, not a face: one walking shot plus two detail frames, the zip back pocket and the belt. Approving cuts a 9:16 Story that keeps the headline and both details.",
      "images": [
-      "assets/sd/sd-p-denim-model.jpg"
+      "assets/sd/sd-cr-bottomwear.jpg"
      ],
      "cta": {
-      "label": "Approve concept"
+      "label": "Publish Campaign",
+      "logo": "meta",
+      "brandColor": "#0866FF"
      },
      "type": "image"
     },
@@ -92,31 +95,38 @@ window.FEED_DATA = {
       "deck"
      ],
      "agent": "performance",
-     "time": "6 min",
-     "title": "Every hoodie in Sweatshirts & Hoodies is discounted 55-65%, with nothing said above the fold",
-     "sub": "Code Tech Relaxed Zip and Carbon Ultra Track Top are both marked down 55-65% and the badge on the listing doesn't say so. Adding a sale badge turns a hidden discount into the reason to click.",
-     "cta": {
-      "label": "Add sale badge"
-     },
-     "type": "table",
+     "time": "7 min",
+     "deckCol": "ads",
+     "title": "Lead the hoodie ads with the price cut",
+     "sub": "Every style on page one of Sweatshirts & Hoodies is 55 to 65% off. Approving builds a Meta catalog ad that puts the cut in the first frame instead of the caption.",
      "rows": [
       [
-       "Code Tech Relaxed Zip (Black)",
-       "Rs 7,370 -> Rs 2,948 (60% off)"
+       "The Dry Hoodie",
+       "₹8,999 → ₹4,049 · 55% off"
       ],
       [
-       "Code Tech Relaxed Zip (Brown)",
-       "Rs 7,370 -> Rs 2,579 (65% off)"
+       "Tech Hoodie",
+       "₹7,370 → ₹2,579 · 65% off"
+      ],
+      [
+       "Tech Relaxed Zip Hoodie",
+       "₹9,480 → ₹3,318 · 65% off"
       ],
       [
        "Carbon Ultra Track Top",
-       "Rs 8,999 -> Rs 4,049 (55% off)"
+       "₹13,999 → ₹6,299 · 55% off"
       ]
      ],
      "badge": [
-      "Pricing",
-      "warn"
-     ]
+      "Sale depth",
+      "info"
+     ],
+     "cta": {
+      "label": "Publish Campaign",
+      "logo": "meta",
+      "brandColor": "#0866FF"
+     },
+     "type": "table"
     },
     {
      "id": "sd-05",
@@ -125,15 +135,22 @@ window.FEED_DATA = {
       "deck"
      ],
      "agent": "performance",
-     "time": "22 min",
-     "title": "Meta and Google are both live through the same tag manager, feeding off different catalogs",
-     "sub": "GTM-55MBBMF fires both the Meta pixel and Google Ads conversion tags. Meta's feed still points at the pre-sale product set. Re-pointing it at the live discounted catalog should lift ROAS without touching a single ad.",
+     "time": "24 min",
+     "deckCol": "ads",
+     "campaign": "The Dry Hoodie",
+     "ratio": "square",
+     "title": "Pick one message for the Dry Hoodie",
+     "sub": "The listing carries a NEW tag and a 55% OFF badge at once, which reads as clearance on something just launched. Approving runs the ad on the TECHNICALS back print with the new-season line only.",
+     "images": [
+      "assets/sd/sd-pr-dry-back.jpg",
+      "assets/sd/sd-pr-dry-front.jpg"
+     ],
      "cta": {
-      "label": "Re-point Meta feed",
+      "label": "Publish Campaign",
       "logo": "meta",
       "brandColor": "#0866FF"
      },
-     "type": "text"
+     "type": "image"
     },
     {
      "id": "sd-06",
@@ -142,15 +159,15 @@ window.FEED_DATA = {
       "deck"
      ],
      "agent": "storefront",
-     "time": "9 min",
-     "deckCol": "catalog",
-     "title": "Re-sequence the Sweatshirts & Hoodies gallery to lead with the discount, not the flat-lay",
-     "sub": "Code Tech Relaxed Zip currently opens on a plain hanging shot. Leading with the on-body crop and moving the flat-lay second matches how the denim listings are already sequenced.",
+     "time": "11 min",
+     "deckCol": "storefront",
      "ratio": "square",
+     "title": "Move three broken-size styles out of the first row",
+     "sub": "Both Essential Logo Raglan Half Zips and the Vintage Athletic Half Zip sit in the top seven of Sweatshirts & Hoodies with only XL or 2XL left. Approving drops them below styles with full size runs.",
      "images": [
-      "assets/sd/sd-p-hood1.jpg",
-      "assets/sd/sd-p-hood2.jpeg",
-      "assets/sd/sd-p-hood3.jpg"
+      "assets/sd/sd-pr-raglan-red.jpg",
+      "assets/sd/sd-pr-raglan-green.jpg",
+      "assets/sd/sd-pr-athletic-grey.jpg"
      ],
      "cta": {
       "label": "Apply Update"
@@ -164,16 +181,18 @@ window.FEED_DATA = {
       "deck"
      ],
      "agent": "storefront",
-     "time": "35 min",
+     "time": "40 min",
      "deckCol": "catalog",
-     "title": "The Fynd Platform catalog is missing GTINs on the Polo range",
-     "sub": "Men's Polo listings are syncing to Google Merchant Center without a GTIN, which caps their eligibility for the free listings surface. Every other collection audited has this filled in.",
      "ratio": "square",
+     "title": "Match the backdrop on two Skinny Denims listings",
+     "sub": "1 Kyoto Skinny Clean and 1 Kyoto Skinny Whiskered are shot on mustard while the rest of page one is on grey. Approving swaps both backdrops to grey and leaves the product untouched.",
      "images": [
-      "assets/sd/sd-p-polo.jpg"
+      "assets/sd/sd-pr-den3.jpg",
+      "assets/sd/sd-pr-den9.jpg",
+      "assets/sd/sd-pr-den1.jpg"
      ],
      "cta": {
-      "label": "Flag for catalog fix"
+      "label": "Apply Update"
      },
      "type": "image"
     },
@@ -183,17 +202,39 @@ window.FEED_DATA = {
       "feed",
       "deck"
      ],
+     "agent": "creative",
+     "time": "1 hr",
+     "campaign": "The HIM Edit",
+     "ratio": "square",
+     "title": "Send the HIM Edit to the men's audience on its own",
+     "sub": "The HIM Edit is live on the homepage and nowhere else. Approving publishes it as its own post aimed at the men's audience, so it is not competing with the HER Edit for the same slot.",
+     "images": [
+      "assets/sd/sd-cr-him.jpg"
+     ],
+     "cta": {
+      "label": "Publish Campaign",
+      "logo": "meta",
+      "brandColor": "#0866FF"
+     },
+     "type": "image"
+    },
+    {
+     "id": "sd-09",
+     "loc": [
+      "feed",
+      "deck"
+     ],
      "agent": "visibility",
-     "time": "52 min",
-     "title": "Run an AI visibility audit for superdry.in before recommending anything here",
-     "sub": "No visibility baseline exists yet for this store. Approving this runs the same audit done for other brands so the next round of cards is based on a real score, not a guess.",
+     "time": "1 hr",
+     "title": "Run an AI visibility audit for superdry.in",
+     "sub": "There is no visibility baseline for this store yet. Approving runs the audit across ChatGPT, Perplexity and Google AI Overviews, so the next cards here come from a real score.",
      "cta": {
       "label": "Run visibility audit"
      },
      "type": "text"
     },
     {
-     "id": "sd-09",
+     "id": "sd-10",
      "loc": [
       "feed"
      ],
@@ -203,24 +244,24 @@ window.FEED_DATA = {
      "type": "connect"
     },
     {
-     "id": "sd-10",
+     "id": "sd-11",
      "loc": [
       "onboarding"
      ],
      "agent": "orchestrator",
      "title": "About the brand",
-     "sub": "Superdry is a British-founded clothing brand mixing Japanese-inspired graphics with American vintage and British tailoring; in India it trades through superdry.in, a licensed storefront, not through Superdry Plc directly.",
+     "sub": "Superdry mixes Japanese-inspired graphics with American vintage and British tailoring. In India it sells through superdry.in, run by the Reliance Brands joint venture that has owned the brand's South Asia IP since 2023.",
      "about": true,
      "tags": [
-      "Vintage-inspired",
       "Graphic-led",
-      "Licensed India store"
+      "Vintage-inspired",
+      "Reliance Brands JV"
      ],
      "editable": true,
      "type": "about"
     },
     {
-     "id": "sd-11",
+     "id": "sd-12",
      "loc": [
       "onboarding"
      ],
@@ -228,11 +269,11 @@ window.FEED_DATA = {
      "title": "Brand guidelines",
      "about": true,
      "brandkit": {
-      "logo": "assets/sd/sd-favicon.png",
+      "logo": "assets/sd/sd-brandkit-logo.png",
       "colors": [
+       "#FF1E00",
        "#0E0E0E",
-       "#e87a1e",
-       "#585555"
+       "#FFFFFF"
       ],
       "type": {
        "sample": "Superdry",
@@ -243,24 +284,24 @@ window.FEED_DATA = {
      "type": "brandkit"
     },
     {
-     "id": "sd-12",
+     "id": "sd-13",
      "loc": [
       "onboarding"
      ],
      "agent": "orchestrator",
      "title": "Voice and tone",
-     "sub": "Product copy is short and direct: fabric, fit and the graphic story, no fine print. Sale and delivery promises (Priority Delivery, Easy Returns) sit right in the meta description, not buried in policy pages.",
+     "sub": "Short and loud: all-caps product names, the discount stated as a badge, and the promises (Priority Delivery, Easy Returns) up in the site description rather than buried in policy pages.",
      "about": true,
      "tags": [
-      "Direct",
-      "Fit-first",
-      "Promise-forward"
+      "All-caps",
+      "Discount-forward",
+      "Promise-first"
      ],
      "editable": true,
      "type": "about"
     },
     {
-     "id": "sd-13",
+     "id": "sd-14",
      "loc": [
       "onboarding"
      ],
@@ -270,40 +311,21 @@ window.FEED_DATA = {
      "type": "connect"
     },
     {
-     "id": "sd-14",
-     "loc": [
-      "onboarding"
-     ],
-     "agent": "orchestrator",
-     "title": "Company",
-     "sub": "superdry.in runs on Fynd Platform (Reliance's unified-commerce stack), company id 46, not Shopify and not a Next.js storefront. India operations are a licensed distributor site, separate from Superdry Plc's own UK-run stores.",
-     "about": true,
-     "tags": [
-      "Fynd Platform",
-      "Licensed distributor",
-      {
-       "t": "Add team size",
-       "gap": true
-      }
-     ],
-     "editable": true,
-     "type": "about"
-    },
-    {
      "id": "sd-15",
      "loc": [
       "onboarding"
      ],
      "agent": "orchestrator",
-     "title": "Product catalog",
-     "sub": "Organized across Topwear, Bottomwear, Sweatshirts & Hoodies, Denims, Men's Polo, Footwear (Shoes and Slides), Swimwear & Innerwear and Fashion Accessories, plus a standing Superdry Sports line and an AW26 seasonal push.",
+     "title": "Company",
+     "sub": "superdry.in runs on Fynd Platform, not Shopify, with Meta and Google Ads both fired from one Google Tag Manager container. The storefront belongs to the Reliance Brands joint venture, separate from Superdry's UK business.",
      "about": true,
      "tags": [
-      "Topwear",
-      "Sweatshirts & Hoodies",
-      "Denims",
-      "Footwear",
-      "Superdry Sports"
+      "Fynd Platform",
+      "Reliance Brands",
+      {
+       "t": "Add team size",
+       "gap": true
+      }
      ],
      "editable": true,
      "type": "about"
@@ -314,9 +336,16 @@ window.FEED_DATA = {
       "onboarding"
      ],
      "agent": "orchestrator",
-     "title": "Product information",
-     "sub": "Code Tech Relaxed Zip and Carbon Ultra Track Top are the two hoodie/track styles leading the Sweatshirts & Hoodies collection, both marked down 55-65%. AW26 and Bottomwear Edit are the two live homepage campaigns.",
+     "title": "Product catalog",
+     "sub": "5,461 products across the Men's (3,381) and Women's (2,080) collections, organised into topwear, bottomwear, denim, polos, footwear, innerwear and accessories, plus a Superdry Sports line.",
      "about": true,
+     "tags": [
+      "Sweatshirts & Hoodies",
+      "Skinny Denims",
+      "Polos",
+      "Footwear",
+      "Superdry Sports"
+     ],
      "editable": true,
      "type": "about"
     },
@@ -326,8 +355,8 @@ window.FEED_DATA = {
       "onboarding"
      ],
      "agent": "orchestrator",
-     "title": "Audience",
-     "sub": "Skews young, style-led, India metro; the product mix (graphic tees, denim, hoodies, sport crossover) and the discount-led pricing point at a value-conscious fashion buyer rather than a full-price loyalist.",
+     "title": "Product information",
+     "sub": "The Dry Hoodie leads Sweatshirts & Hoodies at ₹4,049 (55% off), tagged NEW. The 1 Kyoto Skinny family fills most of the 64 Skinny Denims listings, all at 65% off. AW'26 New Arrivals is the lead homepage campaign.",
      "about": true,
      "editable": true,
      "type": "about"
@@ -338,20 +367,32 @@ window.FEED_DATA = {
       "onboarding"
      ],
      "agent": "orchestrator",
+     "title": "Audience",
+     "sub": "Men and women buying streetwear-leaning basics: graphic tees, hoodies, skinny denim and polos. The campaigns are shot at festivals and fairgrounds, and almost every listing sells on discount.",
+     "about": true,
+     "editable": true,
+     "type": "about"
+    },
+    {
+     "id": "sd-19",
+     "loc": [
+      "onboarding"
+     ],
+     "agent": "orchestrator",
      "title": "Industry leaders",
      "about": true,
      "tags": [
       {
-       "t": "jackjones.com",
+       "t": "jackjones.in",
        "dot": "#111111"
       },
       {
-       "t": "us.puma.com",
-       "dot": "#ac1e1e"
+       "t": "levi.in",
+       "dot": "#c41230"
       },
       {
-       "t": "levi.in",
-       "dot": "#3b3b3b"
+       "t": "in.puma.com",
+       "dot": "#ac1e1e"
       }
      ],
      "editable": true,

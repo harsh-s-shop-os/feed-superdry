@@ -2237,7 +2237,7 @@
     transition:transform .24s cubic-bezier(.2,.9,.3,1);
   }
   .scrim.open .modal{transform:none}
-  .modal-hero{position:relative;aspect-ratio:946/465;background:#cfe6f5}
+  .modal-hero{position:relative;aspect-ratio:946/465;background:#141414}
   .modal-hero img{width:100%;height:100%;object-fit:cover;display:block}
   .modal-close{
     position:absolute;top:14px;right:14px;
@@ -2253,7 +2253,7 @@
   .modal-body p{font-size:15px;line-height:22px;color:var(--fg-2);margin:0 0 24px}
 
   .modal.jam{width:min(520px,100%)}
-  .modal.jam .modal-hero{aspect-ratio:1000/530;background:#1e4b3f}
+  .modal.jam .modal-hero{aspect-ratio:1000/530;background:#0E0E0E}
   .modal.jam .modal-close{color:#fff}
   .modal.jam .modal-close:hover{background:rgba(255,255,255,.16)}
   .modal.jam .modal-body{padding:24px}
@@ -3407,11 +3407,11 @@
   </div>
 
   <div class="rail-badge-wrap">
-    <button class="rail-badge" aria-label="Cosmix workspace">
+    <button class="rail-badge" aria-label="Superdry workspace">
       <span class="ini"><img src="assets/sd/sd-favicon.png" alt="" width="36" height="36"></span>
-      <span class="rail-label">Cosmix</span>
+      <span class="rail-label">Superdry</span>
     </button>
-    <span class="rail-tip">Cosmix workspace</span>
+    <span class="rail-tip">Superdry workspace</span>
   </div>
 </aside>
 
@@ -3739,7 +3739,7 @@
 <div class="scrim" id="pro-scrim" role="dialog" aria-modal="true" aria-labelledby="pro-title">
   <div class="modal">
     <div class="modal-hero">
-      <img src="assets/sd/sd-hero-aw26.jpg" alt="">
+      <img src="assets/sd/sd-wide-aw26.jpg" alt="">
       <button class="modal-close" data-close aria-label="Close">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
           <path d="M18 6 6 18M6 6l12 12"/>
@@ -3762,7 +3762,7 @@
 <div class="scrim" id="jam-scrim" role="dialog" aria-modal="true" aria-labelledby="jam-title">
   <div class="modal jam">
     <div class="modal-hero">
-      <img src="assets/sd/sd-hero-bottomwear.jpg" alt="">
+      <img src="assets/sd/sd-wide-her.jpg" alt="">
       <button class="modal-close" data-close aria-label="Close">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
           <path d="M18 6 6 18M6 6l12 12"/>
@@ -3794,7 +3794,7 @@
 <div class="scrim" id="credits-scrim" role="dialog" aria-modal="true" aria-labelledby="credits-title">
   <div class="modal">
     <div class="modal-hero">
-      <img src="assets/sd/sd-hero-aw26.jpg" alt="">
+      <img src="assets/sd/sd-wide-topwear.jpg" alt="">
       <button class="modal-close" data-close aria-label="Close">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
           <path d="M18 6 6 18M6 6l12 12"/>
@@ -3880,7 +3880,7 @@
         <stop offset=".69" stop-color="#F2A4F2"/><stop offset="1" stop-color="#F9C391"/>
       </linearGradient></defs>
     </svg>
-    <h2>Cosmix, welcome to your feed</h2>
+    <h2>Superdry, welcome to your feed</h2>
     <button class="lm" id="su-open" aria-label="Get started">
       <span class="lm-rim"><span class="lm-in">Get started
         <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
@@ -3987,7 +3987,7 @@
     branded:     { cited:3, of:3 },
     discovery:   { cited:0, of:8, multivitamin:5 },
     leaderboard: { share:24, rank:1, of:9 },              // share of voice across the 9 tracked brands
-    ledger:      { cosmix:11, others:313, share:3 },      // citations across every source the engines read
+    ledger:      { brand:11, others:313, share:3 },      // citations across every source the engines read
     sources: [ ['healthkart.com',16], ['amazon.in',16], ['1mg.com',12], ['nutrabay.com',8], ['fssai.gov.in',7] ],
     post: { title:'What to Actually Look For on a Multivitamin Label', path:'/blogs/nutrition',
             answers:'five multivitamin questions', citedToday:'healthkart, guardian.in, amazon.in' }
@@ -4363,10 +4363,7 @@
     creative:'creatives', performance:'ads', storefront:'storefront', visibility:'visibility'
   };
   // catalog is its own segment: the product feed itself, mostly the creative director
-  const CATALOG = new Set([
-    'Five products are disapproved on Meta',
-    'Show why Fermented Yeast Protein beats standard whey'
-  ]);
+  const CATALOG = new Set([]);
   const sectorOf = (p) => p.deckCol || (CATALOG.has(p.title) ? 'catalog' : SECTOR_BY_AGENT[p.agent]);
   const byAgent = (k) => ALL_POSTS.filter(p => inDeck(p) && sectorOf(p) === k);
 
@@ -4425,9 +4422,9 @@
       // each slide is a finished illustration; c/c2 stay as the fallback wash while it loads
       // all three images share one near-black green, so the colour that shows
       // through under the headline is the same on every slide
-      { c:'#061007', c2:'#57b32a', img:'assets/intro-1.jpg', h:'This is your feed. Updated everyday with new ideas.' },
-      { c:'#061007', c2:'#57b32a', img:'assets/intro-3.jpg', h:'Jam with agents or humans to perfect it.' },
-      { c:'#061007', c2:'#57b32a', img:'assets/intro-2.jpg', h:'Approve and publish to your platforms.' }
+      { c:'#120302', c2:'#FF1E00', img:'assets/intro-1.jpg', h:'This is your feed. Updated everyday with new ideas.' },
+      { c:'#120302', c2:'#FF1E00', img:'assets/intro-3.jpg', h:'Jam with agents or humans to perfect it.' },
+      { c:'#120302', c2:'#FF1E00', img:'assets/intro-2.jpg', h:'Approve and publish to your platforms.' }
     ]
   };
   const introCard = () => {
@@ -4515,9 +4512,9 @@
 
   const SECTOR_STATE = {
     signals:    { on:false, note:'Waiting on your customer data' },
-    catalog:    { on:true,  every:5200, shimmer:'3.1s', stream:['Re-syncing 80 products','Checking Meta feed rejections','Matching GTINs against Fynd Platform','Re-reading stock on the live feed','Scoring the top 20 by rating'] },
+    catalog:    { on:true,  every:5200, shimmer:'3.1s', stream:['Re-syncing 5,461 products','Checking Meta feed rejections','Matching GTINs against Fynd Platform','Re-reading stock on the live feed','Scoring the top 20 by rating'] },
     creatives:  { on:true,  every:4300, shimmer:'2.7s', stream:['Finding new trends','Cutting three hero frames','Reading what landed last week','Matching the launch to placements','Drafting the next brief'] },
-    ads:        { on:true,  every:5900, shimmer:'3.4s', stream:['Reading yesterday spend','Checking frequency on four sets','Pulling a CPA delta','Watching the My Happy Gut set','Scoring creative by hold rate'] },
+    ads:        { on:true,  every:5900, shimmer:'3.4s', stream:['Reading yesterday spend','Checking frequency on four sets','Pulling a CPA delta','Watching the AW\'26 set','Scoring creative by hold rate'] },
     storefront: { on:false, note:'Idle, last run 40 min ago' },
     visibility: { on:false, note:'Queued, next run in 12 min', soon:true }
   };
@@ -4533,7 +4530,7 @@
   };
 
   // whatever the brand turned out to be during setup
-  let BRAND_NAME = SHEET.brand.name || 'Cosmix';
+  let BRAND_NAME = SHEET.brand.name || 'Superdry';
   window.__setBrand = (name) => { BRAND_NAME = name || BRAND_NAME; };
 
   const saved = new Set();
@@ -5837,16 +5834,16 @@
 
   // ---------- sessions: one list behind both history and search ----------
   const SESSIONS = [
-    ['Today',       'Remix the Made to Absorb carousel',           '12 min ago'],
-    ['Today',       'Three directions for No-Nonsense Protein',     '1 hr ago'],
-    ['Today',       'Why is visibility flat on gut-health terms',   '3 hr ago'],
-    ['Yesterday',   'Fermented Yeast Protein proof copy',           'Yesterday, 6:40 pm'],
-    ['Yesterday',   'Recut the hero frame for pre-roll',            'Yesterday, 2:15 pm'],
-    ['Yesterday',   'Jam with the team on the Fermented hero',      'Yesterday, 11:02 am'],
-    ['Last 7 days', 'Meta Ads budget split for the launch',         'Tuesday'],
-    ['Last 7 days', 'Rewrite the My Happy Gut description',         'Tuesday'],
-    ['Last 7 days', 'Who owns clean plant protein in AI answers',   'Monday'],
-    ['Last 7 days', 'Brand health dip after the feed change',      'Sunday']
+    ['Today',       'Cut the HER Edit for Reels',                    '12 min ago'],
+    ['Today',       'Three directions for the Dry Hoodie back print', '1 hr ago'],
+    ['Today',       'Why is visibility flat on hoodie searches',      '3 hr ago'],
+    ['Yesterday',   'AW\'26 New Arrivals ad copy',                    'Yesterday, 6:40 pm'],
+    ['Yesterday',   'Recut the Top Wear Edit for pre-roll',           'Yesterday, 2:15 pm'],
+    ['Yesterday',   'Jam with the team on the Bottomwear Edit',       'Yesterday, 11:02 am'],
+    ['Last 7 days', 'Meta Ads budget split for AW\'26',               'Tuesday'],
+    ['Last 7 days', 'Rewrite the 1 Kyoto Skinny descriptions',        'Tuesday'],
+    ['Last 7 days', 'Who owns premium hoodies in AI answers',         'Monday'],
+    ['Last 7 days', 'Brand health dip after the sale went live',      'Sunday']
   ];
 
   // ---------- history panel ----------
@@ -5986,36 +5983,36 @@
     // one brand colour per slide, in the same order as that story's ring blobs
     // (story-1/2/3.svg), so the circle and the story it opens read as one thing
     trends: { title:'Trends', avatar:'assets/agent-performance.svg', slides:[
-      { c:'#0E0E0E', h:'The discount is the headline now',
-        p:'Every hoodie in Sweatshirts & Hoodies is already 55-65% off. Shoppers scroll past a plain product shot; a visible sale badge is what stops the scroll.' },
-      { c:'#e87a1e', h:'On-model is outperforming flat-lay',
-        p:'Listings that open on an on-model or on-foot shot are holding attention longer than the ones that still lead with a hanging packshot.' },
-      { c:'#F4F4F4', h:'Two campaigns, one homepage strip',
-        p:'AW26 and the Bottomwear Edit are both live on the homepage and both unused anywhere else. Either one is ready to run as a standalone post today.' }
+      { c:'#FF1E00', h:'The whole range is on sale',
+        p:'Every style on the first page of Sweatshirts & Hoodies is 55 to 65% off, every Skinny Denims listing is 65% off and every polo is 60% off.' },
+      { c:'#8C1000', h:'Five edits, one homepage',
+        p:'AW\'26, the HIM Edit, the HER Edit, the Top Wear Edit and the Bottomwear Edit are all live on the homepage and nowhere else yet.' },
+      { c:'#FFFFFF', h:'Sizes are thinning up front',
+        p:'Three of the first twelve hoodie and sweatshirt listings are down to one core size. The first row is selling what most people cannot buy.' }
     ]},
     new: { title:'What is new', avatar:'assets/agent-creative.svg', slides:[
-      { c:'#e87a1e', h:'Every ratio, one feed',
+      { c:'#8C1000', h:'Every ratio, one feed',
         p:'Cards now post at 4:5, 1:1 and 16:9, matched to wherever the work is actually going to run.' },
-      { c:'#F4F4F4', h:'Remix with Agent',
+      { c:'#FFFFFF', h:'Remix with Agent',
         p:'Take any post into chat, tell the agent what to change, and get three directions back.' },
-      { c:'#0E0E0E', h:'Jam with the team',
+      { c:'#FF1E00', h:'Jam with the team',
         p:'Pull a ShopOS specialist onto any post. They pick it up on WhatsApp and stay on it with you.' }
     ]},
     howto: { title:'How to', avatar:'assets/agent-visibility.svg', slides:[
-      { c:'#F4F4F4', h:'Tune the feed by liking',
+      { c:'#FFFFFF', h:'Tune the feed by liking',
         p:'Every like teaches the agents what to post more of. The feed narrows to your brand within a week.' },
-      { c:'#0E0E0E', h:'Start from a post, not a prompt',
+      { c:'#FF1E00', h:'Start from a post, not a prompt',
         p:'A blank box asks you to know the answer. A post gives you something to push against.' },
-      { c:'#e87a1e', h:'Jam when it needs a person',
+      { c:'#8C1000', h:'Jam when it needs a person',
         p:'Pull the team into any card. The thread keeps the brief, so nobody starts from scratch.' }
     ]},
     ads: { title:'Popular ads', avatar:'assets/agent-storefront.svg', slides:[
-      { img:'assets/sd/sd-p-denim-model.jpg', h:'Skinny Denims, on-model',
-        p:'The on-model crop of your top denim listing is your strongest performing catalog shot this week.' },
-      { img:'assets/sd/sd-hero-aw26.jpg', h:'AW26 Master',
-        p:'Your current homepage campaign, unused anywhere else. Ready to run as a standalone post today.' },
-      { img:'assets/sd/sd-hero-bottomwear.jpg', h:'Bottomwear Edit',
-        p:'Denim and bottomwear together outsell either alone on the collection pages.' }
+      { img:'assets/sd/sd-m-her.jpg', h:'The HER Edit',
+        p:'Live on the homepage in a tall mobile cut already, so it becomes a 4:5 feed post with only a small side crop.' },
+      { img:'assets/sd/sd-m-topwear.jpg', h:'The Top Wear Edit',
+        p:'Same fairground shoot as the HER Edit, so the two run as one campaign rather than two.' },
+      { img:'assets/sd/sd-m-him.jpg', h:'The HIM Edit',
+        p:'The third frame of the set. Together they cover men, women and the category push in one brief.' }
     ]}
   };
 
@@ -6206,9 +6203,9 @@
   const SOURCES = [
     { id:'fynd',     name:'Fynd Platform',      kind:'Orders, customers, products, returns', required:true,
       unlocks:'Purchase history and lifecycle. Every signal needs this one.',
-      records:'2,400 customer records · 4,118 orders · 80 products',
+      records:'2,400 customer records · 4,118 orders · 5,461 products',
       steps:['Importing purchase history','Matching customer records','Preparing signals'],
-      icon:'<img src="assets/sd/sd-logo.png" alt="">' },
+      icon:'<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l1-4h16l1 4"/><path d="M4 7v12a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V7"/><path d="M9 11a3 3 0 0 0 6 0"/></svg>' },
     { id:'klaviyo',  name:'Klaviyo',           kind:'Email reachability, consent, journeys',
       unlocks:'Email as a channel, contact-frequency rules and journey conflict checks.',
       records:'2,057 subscribed profiles · 38 segments',
@@ -6246,8 +6243,8 @@
         'Not contacted in the last 7 days, no open support issue, not already in a journey'
       ],
       msg:{
-        subject:'{{first_name}}, the My Happy Gut that goes with your {{category}}',
-        body:'Hi {{first_name}},\n\nYou picked up a {{category}} from us on {{purchase_date}}. My Happy Gut is the one most people reach for next: same clean formula, made for daily gut support, and it works with what you already take.\n\nWe have your flavour back in stock.',
+        subject:'{{first_name}}, the denim that goes with your {{category}}',
+        body:'Hi {{first_name}},\n\nYou picked up a {{category}} from us on {{purchase_date}}. The 1 Kyoto Skinny is what most people add next: it goes with what you already bought, and it is 65% off right now.\n\nYour size is back in stock.',
         cta:'See the pairing'
       },
       journey:[
@@ -6259,29 +6256,29 @@
       ],
       decision:[
         ['Why these people', 'One order, 14 to 60 days ago, no second order.'],
-        ['Why now', 'The pairing product is back in stock in the flavours they buy.'],
+        ['Why now', 'The pairing style is back in stock in the sizes they buy.'],
         ['Why this channel', 'Email consent covers 231 of them. WhatsApp covers 84.'],
         ['What would stop it', 'Stock falling below 20 units, or the support queue flagging a return.']
       ],
-      asset:'Pairing frame, No-Nonsense Protein shown with My Happy Gut. The Creative director has it drafted.'
+      asset:'Pairing frame, the Dry Hoodie shown with the 1 Kyoto Skinny. The Creative director has it drafted.'
     },
     { id:'loyal', life:'loyal', lifeLabel:'Loyal', when:'40 min',
       headline:'Give your repeat customers first access to the launch.',
-      why:'The new Fermented Yeast Protein flavour and the Made to Absorb bundle go live on 22 September. 311 customers have three or more orders and have already bought protein or superfoods, so the launch category is one they have paid for before.',
+      why:'AW\'26 New Arrivals is live on the homepage. 311 customers have three or more orders and have already bought topwear, so the new season is a category they have paid for before.',
       objective:'Let the people who already buy most see the launch before anyone else. No discount.',
       channel:'Email',
       counts:{ eligible:311, unreachable:22, noConsent:9, recent:26, support:3, inJourney:14 },
       rules:[
         'Three or more completed purchases',
         'Last order within the past 120 days',
-        'A protein or superfood purchase already on file',
-        'Launch products available on 22 September',
+        'A topwear purchase already on file',
+        'AW\'26 styles in stock in their size',
         'Reachable on the selected channel, with consent',
         'Not contacted in the last 7 days, no open support issue, not already in a journey'
       ],
       msg:{
         subject:'{{first_name}}, you see this first',
-        body:'Hi {{first_name}},\n\nThe new Fermented Yeast Protein flavour and the Made to Absorb bundle go live on Monday. You are on the early list, so the link below works from Friday evening.\n\nNo code, no discount. Just first pick of the flavours.',
+        body:'Hi {{first_name}},\n\nAW\'26 New Arrivals is in. You are on the early list, so the link below shows you the full drop before it goes out to everyone.\n\nNo code, no discount. Just first pick of the sizes.',
         cta:'Open early access'
       },
       journey:[
@@ -6295,7 +6292,7 @@
         ['Why these people', 'Three or more orders and a purchase in the launch category.'],
         ['Why now', 'Early access only means something before the public launch.'],
         ['Why no discount', 'These customers buy at full price. A code trains them not to.'],
-        ['What would stop it', 'The launch slipping, or fewer than 200 units across flavours.']
+        ['What would stop it', 'Fewer than 200 units left across the AW\'26 sizes.']
       ],
       asset:null
     },
@@ -6314,7 +6311,7 @@
       ],
       msg:{
         subject:'',
-        body:'Hi {{first_name}}, it has been a while. You bought the {{last_product}} back in {{last_month}} and we have not heard from you since.\n\nQuick one: did it work for you?\n\nIf something went wrong we would rather fix it than sell you anything.',
+        body:'Hi {{first_name}}, it has been a while. You bought the {{last_product}} back in {{last_month}} and we have not heard from you since.\n\nQuick one: did it fit the way you wanted?\n\nIf something went wrong we would rather fix it than sell you anything.',
         cta:'Reply to this message'
       },
       journey:[
@@ -6604,7 +6601,7 @@
 
     const seedOf = (t) => [...t].reduce((a, c) => (a * 31 + c.charCodeAt(0)) >>> 0, 7);
     const rand = (sd) => () => (sd = (sd * 1664525 + 1013904223) >>> 0) / 4294967296;
-    const WORDS = ['cosmix','urban','performance','north','grade','shop','studio','supply','goods',
+    const WORDS = ['superdry','urban','performance','north','grade','shop','studio','supply','goods',
                    'labs','co','works','wear','active','field','house','made','one','the'];
     const nameFromHost = (host) => {
       const stem = host.split('.')[0];
@@ -6618,9 +6615,9 @@
 
     // stores this prototype has read for real: name and live product count off the site
     const SB = window.SHEET_VARIANT.brand;
-    const SHEET_HOST = SB.host || 'cosmix.in';
-    const KNOWN_STORES = { [SHEET_HOST]: { name:SB.name || 'Cosmix', products:SB.products || 80 } };
-    let BRAND = { host:SHEET_HOST, name:SB.name || 'Cosmix', products:SB.products || 80, fresh:false };
+    const SHEET_HOST = SB.host || 'superdry.in';
+    const KNOWN_STORES = { [SHEET_HOST]: { name:SB.name || 'Superdry', products:SB.products || 5461 } };
+    let BRAND = { host:SHEET_HOST, name:SB.name || 'Superdry', products:SB.products || 5461, fresh:false };
 
     const AG_ORDER = ['creative', 'performance', 'storefront', 'visibility'];
 
@@ -6702,7 +6699,7 @@
       tick();
     };
 
-    // brand-understanding cards: what ShopOS read off cosmix.in, one fact per card.
+    // brand-understanding cards: what ShopOS read off superdry.in, one fact per card.
     // Same post shape as everything else in ALL_POSTS (agent + title + sub), so card()
     // renders the identical header, menu, and like/remix/jam row as any other post —
     // "about" just tells card() to skip the media/data-table slot, since there is none.
@@ -6770,7 +6767,7 @@ const aboutCard = (p) => `
     // Signals connector row (icon, name, one line, a white Connect button),
     // just with copy written for this moment rather than the generic Signals one
     const CONNECT_ROWS = {
-      fynd: { icon:'<img src="assets/sd/sd-logo.png" alt="">', name:'Fynd Platform',
+      fynd: { icon:'<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l1-4h16l1 4"/><path d="M4 7v12a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V7"/><path d="M9 11a3 3 0 0 0 6 0"/></svg>', name:'Fynd Platform',
                  desc:'Connect Fynd Platform for detailed product analytics.' }
     };
     const aboutConnectRow = (id) => {
@@ -7094,7 +7091,7 @@ const aboutCard = (p) => `
     };
 
     const begin = (host, fresh) => {
-      const clean = (host || '').replace(/^https?:\/\//, '').replace(/^www\./, '').split('/')[0] || 'cosmix.in';
+      const clean = (host || '').replace(/^https?:\/\//, '').replace(/^www\./, '').split('/')[0] || 'superdry.in';
       const r = rand(seedOf(clean));
       // a store we have actually read gets its real numbers; any other host gets a plausible guess
       const known = KNOWN_STORES[clean];
@@ -7167,7 +7164,7 @@ const aboutCard = (p) => `
       // an empty field still runs the demo brand: that shortcut stays
       if (v && !looksLikeUrl(v)) { showErr('Enter a valid URL', true); return; }
       clearErr();
-      begin(v || 'cosmix.in', false);
+      begin(v || 'superdry.in', false);
     };
 
     // leaving a field with something unusable in it is the other honest moment to say so
@@ -7313,7 +7310,7 @@ const aboutCard = (p) => `
   /* ---------- prototype asset-version switch ----------
      Three self-contained image sets (v1/v2/v3) behind one number, so the
      same flow/layout/copy can be tested with different product imagery.
-     v1 = the current, real Cosmix asset set, loaded from its original
+     v1 = the current, real Superdry asset set, loaded from its original
      assets/ path. v2 and v3 read from assets/v2/ and assets/v3/ (same
      filenames as v1, different folder) -- currently placeholder copies of
      v1 until the real sets are dropped in.
@@ -7325,7 +7322,7 @@ const aboutCard = (p) => `
     // posts get their images from their own sheet tab; only the story viewer
     // (not in the sheet yet) still swaps images by folder
     const ASSET_VERSION_FILES = new Set([
-      'sd/sd-p-denim-model.jpg', 'sd/sd-hero-aw26.jpg', 'sd/sd-hero-bottomwear.jpg'
+      
     ]);
     const MAX_V = Math.max(1, (window.FEED_DATA && window.FEED_DATA.variants.length) || 1);
 
@@ -7351,6 +7348,8 @@ const aboutCard = (p) => `
       });
     };
 
+    // a single sheet tab means there is nothing to switch between
+    if (MAX_V <= 1) { const vs = document.getElementById('ver-switch'); if (vs) vs.style.display = 'none'; return; }
     const verNumEl = document.getElementById('ver-num');
     const verUpEl = document.getElementById('ver-up');
     const verDownEl = document.getElementById('ver-down');

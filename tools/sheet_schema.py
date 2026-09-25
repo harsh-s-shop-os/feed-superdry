@@ -1,7 +1,7 @@
 """Shared column definitions for the Brand Feeds sheet (used by seed + sync)."""
 BRAND_KEYS = [
     ('Brand name',    'name',       'Shown in the workspace, setup rail and copy'),
-    ('Store URL',     'host',       'Domain only, e.g. cosmix.in'),
+    ('Store URL',     'host',       'Domain only, e.g. superdry.in'),
     ('Product count', 'products',   'Live product count shown during setup'),
     ('Logo',          'logo',       'Image path, URL or Drive link'),
     ('Brand colors',  'colors',     'Hex codes, comma separated'),
